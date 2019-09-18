@@ -2,9 +2,9 @@ var net = require('net');
 var mqtt = require('mqtt')
 var isnumeric = require('isnumeric');
 
-var hapMpIp = "127.0.0.1";
-var hapMpPort = 7891;
-var mqttIp = "127.0.0.1";
+var hapMpIp = "192.168.178.110";
+var hapMpPort = 1000;
+var mqttIp = "192.168.178.108";
 var mqttPort = "1883";
 
 var timeout = 1000;

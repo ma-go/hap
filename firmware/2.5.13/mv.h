@@ -5,8 +5,8 @@
 ////////////////////////////////////////////////////////////////////////////////
 // Erstellt am:          06.01.2006                                           //
 // Erstellt von:         Holger Heuser                                        //
-// Zuletzt geändert am:  28.12.2009                                           //
-// Zuletzt geändert von: Carsten Wolff                                        //
+// Zuletzt geï¿½ndert am:  28.12.2009                                           //
+// Zuletzt geï¿½ndert von: Carsten Wolff                                        //
 ////////////////////////////////////////////////////////////////////////////////
 
 #ifndef MV
@@ -49,7 +49,7 @@
 #define COHADM                // Gedimmter Ausgang                 (Bit 12 - 12)
 #define COHARS                // Rollladensteuerung                (Bit 13 - 13)
 //#define COHADG 2              // siehe oben                        (Bit 14 - 15)
-#define COHAGUI               // Bedienoberfläche                  (Bit 16 - 16)
+//#define COHAGUI               // Bedienoberflï¿½che                  (Bit 16 - 16)
 #define COHAAS                // Autonome Steuerung                (Bit 17 - 17)
 
 

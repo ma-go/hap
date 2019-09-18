@@ -326,18 +326,21 @@ program: $(TARGET).hex $(TARGET).eep
 
 
 
-
 # Create final output files (.hex, .eep) from ELF output file.
 %.hex: %.elf
 	@echo
 	@echo $(MSG_FLASH) $@
 	$(OBJCOPY) -O $(FORMAT) -R .eeprom $< $@
 
+
+
 %.eep: %.elf
 	@echo
 	@echo $(MSG_EEPROM) $@
 	-$(OBJCOPY) -j .eeprom --set-section-flags=.eeprom="alloc,load" \
 	--change-section-lma .eeprom=0 -O $(FORMAT) $< $@
+
+
 
 # Create extended listing file from ELF output file.
 %.lss: %.elf
