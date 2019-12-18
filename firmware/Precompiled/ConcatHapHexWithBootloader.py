@@ -15,18 +15,19 @@ for j in range(1,5):
             desFolder = "hap2.5.1" + str(j) + "_WithoutDimmer_WithoutSerial"
         else:
             desFolder = "hap2.5.1" + str(j) + "_WithoutDimmer_WithSerial"
-        
-        for i in range(15):
-            id = hex(int(i))[2:].zfill(1)
 
-            f1 = open(desFolder + "/haEOF.hex")
-            f1_contents = f1.read()
-            f1.close()
+        for l in range(4,6):
+            for i in range(15):
+                id = hex(int(i))[2:].zfill(1)
 
-            f2 = open("Bootloader/HAPBootLoader-28934" + id + ".hex")
-            f2_contents = f2.read()
-            f2.close()
+                f1 = open(desFolder + "/haEOF.hex")
+                f1_contents = f1.read()
+                f1.close()
 
-            f3 = open(desFolder + "/" + desFolder + "BootLoader-28934" + id + ".hex", "w") # open in `w` mode to write
-            f3.write(f1_contents + f2_contents) # concatenate the contents
-            f3.close()
+                f2 = open("Bootloader/HAPBootLoader-2893" + str(l) + id + ".hex")
+                f2_contents = f2.read()
+                f2.close()
+
+                f3 = open(desFolder + "/" + desFolder + "BootLoader-2893" + str(l) + id + ".hex", "w") # open in `w` mode to write
+                f3.write(f1_contents + f2_contents) # concatenate the contents
+                f3.close()
